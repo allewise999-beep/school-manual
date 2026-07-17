@@ -18,16 +18,18 @@ body{font-family:-apple-system,"PingFang TC","Microsoft JhengHei","Segoe UI",san
 a{color:var(--accent);text-decoration:none;}
 
 /* ========== 入口首頁 ========== */
-#home{display:none;}
+#home{display:none;background:#f6f3ec;}
 #home.show{display:block;}
 .hero{position:relative;background:linear-gradient(180deg,rgba(16,22,34,.66),rgba(16,22,34,.60)),url("bg.jpg") center/cover no-repeat;border-bottom:3px solid var(--gold);padding:54px 24px 50px;text-align:center;}
 .hero-logo{height:48px;width:auto;margin:0 0 20px;display:inline-block;}
 .hero .sys{font-size:14px;color:var(--gold);letter-spacing:2px;font-weight:600;}
-.hero h1{font-size:36px;font-weight:800;margin:10px 0 6px;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.6);}
+.hero h1{font-size:36px;font-weight:800;margin:6px 0 0;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.6);letter-spacing:2px;}
+.hero-eyebrow{font-size:13px;color:var(--gold);letter-spacing:3px;font-weight:600;margin:0 0 4px;text-shadow:0 1px 6px rgba(0,0,0,.5);}
+.hero-rule{width:54px;height:3px;background:var(--gold);border-radius:2px;margin:12px auto 22px;}
 .hero p{color:#eef2f8;margin:0 0 26px;font-size:16px;text-shadow:0 1px 8px rgba(0,0,0,.55);}
 .home-search{max-width:560px;margin:0 auto;position:relative;}
 .home-search input{width:100%;padding:15px 18px 15px 46px;border:1px solid #345579;border-radius:12px;
-  font-size:16px;outline:none;background:#fff;}
+  font-size:16px;outline:none;background:#fff;box-shadow:0 4px 14px rgba(0,0,0,.15);}
 .home-search input:focus{border-color:var(--gold);}
 .home-search .si{position:absolute;left:16px;top:50%;transform:translateY(-50%);color:var(--muted);}
 .hero-county{position:absolute;top:16px;right:18px;display:flex;align-items:center;gap:8px;z-index:3;background:rgba(0,0,0,.34);border:1px solid rgba(255,255,255,.4);border-radius:10px;padding:6px 10px;}
@@ -42,10 +44,10 @@ a{color:var(--accent);text-decoration:none;}
 .cat-head{display:flex;align-items:center;gap:10px;margin:0 0 16px;}
 .cat-dot{width:10px;height:10px;border-radius:50%;}
 .cat-head h2{font-size:18px;font-weight:700;margin:0;}
-.cat-head .cnt{font-size:13px;color:var(--muted);}
+.cat-head .cnt{font-size:12px;color:#8a8578;background:#ece7db;border-radius:20px;padding:2px 9px;}
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;}
-.card{display:flex;align-items:center;justify-content:center;text-align:center;gap:10px;
-  padding:16px 18px;border:1px solid var(--line);border-radius:12px;background:#fff;cursor:pointer;transition:.15s;}
+.card{display:flex;align-items:center;justify-content:space-between;text-align:left;gap:10px;
+  padding:14px 16px;border:1px solid var(--line);border-left:7px solid var(--accent);border-radius:0 10px 10px 0;background:#fff;cursor:pointer;transition:.15s;}
 .card:hover{border-color:var(--accent);box-shadow:0 4px 16px rgba(31,57,88,.12);transform:translateY(-2px);}
 .card .ct{font-size:15px;font-weight:600;color:var(--text);}
 .card .cs{font-size:12px;color:var(--muted);margin-top:2px;}
@@ -195,8 +197,9 @@ a{color:var(--accent);text-decoration:none;}
 <section id="home">
   <div class="hero">
     <svg class="hero-logo" viewBox="0 0 24 24" fill="none" stroke="#f0a01e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-label="操作手冊"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+    <div class="hero-eyebrow">校務行政系統 ・ 數位操作手冊庫</div>
     <h1>操作手冊中心</h1>
-    <p>校務行政系統 ・ 選擇下方手冊，或直接搜尋你要的功能</p>
+    <div class="hero-rule"></div>
     <div class="hero-county">
       <label for="county-home">縣市</label>
       <select id="county-home" class="county-select"></select>
@@ -235,7 +238,7 @@ a{color:var(--accent);text-decoration:none;}
    手冊清單：要新增手冊時，在這裡加一行即可
    { cat:"分類", title:"顯示名稱", file:"content/檔名.md" }
    ============================================================ */
-const COUNTIES = ["新竹縣"];
+const COUNTIES = ["新竹縣", "花蓮縣"];
 const MANUALS_BY_COUNTY = {
   "新竹縣": [
   { cat: "教務", title: "學籍管理", file: "content/學籍管理.md" },
@@ -304,6 +307,9 @@ const MANUALS_BY_COUNTY = {
   { cat: "系統與其他", title: "登入者紀錄", file: "content/登入者紀錄.md" },
   { cat: "系統與其他", title: "成績複合式查詢", file: "content/成績複合式查詢.md" },
   ],
+  "花蓮縣": [
+  { cat: "人事", title: "智慧差勤管理", file: "content/智慧差勤管理.md" },
+  ],
 };
 const CAT_COLOR = { "教務":"#265b98", "學務":"#1f9d52", "人事":"#c98a00", "系統與其他":"#8b5cf6" };
 let currentCounty = COUNTIES[0];
@@ -363,10 +369,10 @@ function buildHome(filter){
     if(!list.length) return; shown+=list.length;
     const block=document.createElement('div'); block.className='cat-block';
     const color=CAT_COLOR[cat]||'#265b98';
-    block.innerHTML=`<div class="cat-head"><span class="cat-dot" style="background:${color}"></span><h2>${cat}</h2></div>`;
+    block.innerHTML=`<div class="cat-head"><span class="cat-dot" style="background:${color}"></span><h2>${cat}</h2><span class="cnt">${list.length}</span></div>`;
     const grid=document.createElement('div'); grid.className='cards';
     list.forEach(o=>{const c=document.createElement('div');c.className='card';
-      c.innerHTML=`<div class="ct">${o.m.title}</div>`;
+      c.innerHTML=`<div class="ct">${o.m.title}</div>`+ARR; c.style.borderLeftColor=color;
       c.addEventListener('click',()=>{location.hash=mhash(o.m.title);});grid.appendChild(c);});
     block.appendChild(grid); homeWrap.appendChild(block);
   });
