@@ -238,7 +238,7 @@ a{color:var(--accent);text-decoration:none;}
    手冊清單：要新增手冊時，在這裡加一行即可
    { cat:"分類", title:"顯示名稱", file:"content/檔名.md" }
    ============================================================ */
-const COUNTIES = ["新竹縣", "新北市"];
+const COUNTIES = ["新竹縣", "新北市", "嘉義市"];
 const MANUALS_BY_COUNTY = {
   "新竹縣": [
   { cat: "教務", title: "學籍管理", file: "content/學籍管理.md" },
@@ -309,6 +309,11 @@ const MANUALS_BY_COUNTY = {
   ],
   "新北市": [
   { cat: "學務", title: "薪資管理", file: "content/薪資管理.md" },
+  ],
+  "嘉義市": [
+  { cat: "系統與其他", title: "學費代收", file: "content/學費代收.md" },
+  { cat: "系統與其他", title: "電子問卷", file: "content/電子問卷.md" },
+  { cat: "系統與其他", title: "教師帳號管理", file: "content/教師帳號管理.md" },
   ],
 };
 const CAT_COLOR = { "教務":"#265b98", "學務":"#1f9d52", "人事":"#c98a00", "系統與其他":"#8b5cf6" };
