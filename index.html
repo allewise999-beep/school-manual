@@ -246,7 +246,7 @@ a{color:var(--accent);text-decoration:none;}
    手冊清單：要新增手冊時，在這裡加一行即可
    { cat:"分類", title:"顯示名稱", file:"content/檔名.md" }
    ============================================================ */
-const COUNTIES = ["新竹縣", "新北市", "嘉義市"];
+const COUNTIES = ["新竹縣", "新北市", "嘉義市", "花蓮縣"];
 const MANUALS_BY_COUNTY = {
   "新竹縣": [
   { cat: "教務", title: "學籍管理", file: "content/學籍管理.md" },
@@ -384,6 +384,35 @@ const MANUALS_BY_COUNTY = {
   { cat: "系統與其他", title: "公告推播", file: "content/公告推播.md" },
   { cat: "系統與其他", title: "密碼還原", file: "content/密碼還原.md" },
   { cat: "系統與其他", title: "校舍管理", file: "content/校舍管理.md" },
+  ],
+  "花蓮縣": [
+  { cat: "教務", title: "行事曆管理", file: "content/行事曆管理.md" },
+  { cat: "系統與其他", title: "公告管理", file: "content/公告管理.md" },
+  { cat: "人事", title: "教師概況查詢", file: "content/教師概況查詢.md" },
+  { cat: "教務", title: "行事曆", file: "content/行事曆.md" },
+  { cat: "系統與其他", title: "全國圖書館", file: "content/全國圖書館.md" },
+  { cat: "教務", title: "免試入學", file: "content/免試入學.md" },
+  { cat: "學務", title: "電子聯絡簿", file: "content/電子聯絡簿.md" },
+  { cat: "學務", title: "I-Point", file: "content/I-Point.md" },
+  { cat: "教務", title: "學籍管理", file: "content/學籍管理.md" },
+  { cat: "教務", title: "升級與編班", file: "content/升級與編班.md" },
+  { cat: "教務", title: "異動管理", file: "content/異動管理.md" },
+  { cat: "教務", title: "課務管理", file: "content/課務管理.md" },
+  { cat: "教務", title: "分組教學", file: "content/分組教學.md" },
+  { cat: "教務", title: "基測學生資料匯出", file: "content/基測學生資料匯出.md" },
+  { cat: "系統與其他", title: "校園製卡", file: "content/校園製卡.md" },
+  { cat: "學務", title: "學生出缺席", file: "content/學生出缺席.md" },
+  { cat: "學務", title: "學生緊急資料", file: "content/學生緊急資料.md" },
+  { cat: "學務", title: "體適能測驗", file: "content/體適能測驗.md" },
+  { cat: "學務", title: "生活輔導", file: "content/生活輔導.md" },
+  { cat: "學務", title: "學生健康資料", file: "content/學生健康資料.md" },
+  { cat: "學務", title: "學生獎懲", file: "content/學生獎懲.md" },
+  { cat: "學務", title: "進路輔導", file: "content/進路輔導.md" },
+  { cat: "人事", title: "人事資料管理", file: "content/人事資料管理.md" },
+  { cat: "系統與其他", title: "場地預約", file: "content/場地預約.md" },
+  { cat: "人事", title: "智慧差勤管理", file: "content/智慧差勤管理.md" },
+  { cat: "學務", title: "社區人力資源", file: "content/社區人力資源.md" },
+  { cat: "教務", title: "本土語文調查", file: "content/本土語文調查.md" },
   ],
 };
 const CAT_COLOR = { "教務":"#265b98", "學務":"#1f9d52", "人事":"#c98a00", "系統與其他":"#8b5cf6" };
