@@ -246,7 +246,7 @@ a{color:var(--accent);text-decoration:none;}
    手冊清單：要新增手冊時，在這裡加一行即可
    { cat:"分類", title:"顯示名稱", file:"content/檔名.md" }
    ============================================================ */
-const COUNTIES = ["新竹縣", "新北市", "嘉義市", "花蓮縣", "宜蘭縣", "金門縣"];
+const COUNTIES = ["新竹縣", "新北市", "嘉義市", "花蓮縣", "宜蘭縣", "金門縣", "南投縣"];
 const MANUALS_BY_COUNTY = {
   "新竹縣": [
   { cat: "教務", title: "學籍管理", file: "content/學籍管理.md" },
@@ -502,6 +502,28 @@ const MANUALS_BY_COUNTY = {
         { cat: "學務", title: "學生競賽獎勵", file: "content/學生競賽獎勵.md" },
         { cat: "教務", title: "課務管理", file: "content/課務管理.md" },
         { cat: "系統與其他", title: "單位管理", file: "content/單位管理.md" },
+  ],
+  "南投縣": [
+        { cat: "系統與其他", title: "訊息中樞", file: "content/訊息中樞.md" },
+        { cat: "教務", title: "新生管理", file: "content/新生管理.md" },
+        { cat: "系統與其他", title: "免試入學", file: "content/免試入學.md" },
+        { cat: "系統與其他", title: "能力檢測", file: "content/能力檢測.md" },
+        { cat: "人事", title: "人事資料管理", file: "content/人事資料管理.md" },
+        { cat: "教務", title: "行事曆", file: "content/行事曆.md" },
+        { cat: "教務", title: "公告管理", file: "content/公告管理.md" },
+        { cat: "系統與其他", title: "學生資料管理", file: "content/學生資料管理.md" },
+        { cat: "系統與其他", title: "測驗工具", file: "content/測驗工具.md" },
+        { cat: "學務", title: "認輔作業", file: "content/認輔作業.md" },
+        { cat: "系統與其他", title: "線上填報", file: "content/線上填報.md" },
+        { cat: "系統與其他", title: "中心管理設定", file: "content/中心管理設定.md" },
+        { cat: "系統與其他", title: "單位人事製卡", file: "content/單位人事製卡.md" },
+        { cat: "系統與其他", title: "設備維修管理", file: "content/設備維修管理.md" },
+        { cat: "系統與其他", title: "場地預約", file: "content/場地預約.md" },
+        { cat: "教務", title: "成績管理", file: "content/成績管理.md" },
+        { cat: "教務", title: "行事曆管理", file: "content/行事曆管理.md" },
+        { cat: "系統與其他", title: "校園學生製卡", file: "content/校園學生製卡.md" },
+        { cat: "學務", title: "學生出缺席", file: "content/學生出缺席.md" },
+        { cat: "學務", title: "學生就學查詢", file: "content/學生就學查詢.md" },
   ],
 };
 const CAT_COLOR = { "教務":"#265b98", "學務":"#1f9d52", "人事":"#c98a00", "系統與其他":"#8b5cf6" };
