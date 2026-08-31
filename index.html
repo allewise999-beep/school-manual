@@ -246,7 +246,7 @@ a{color:var(--accent);text-decoration:none;}
    手冊清單：要新增手冊時，在這裡加一行即可
    { cat:"分類", title:"顯示名稱", file:"content/檔名.md" }
    ============================================================ */
-const COUNTIES = ["新竹縣", "新北市", "嘉義市", "花蓮縣", "宜蘭縣", "金門縣", "南投縣"];
+const COUNTIES = ["新竹縣", "新北市", "嘉義市", "花蓮縣", "宜蘭縣", "金門縣", "南投縣", "苗栗縣"];
 const MANUALS_BY_COUNTY = {
   "新竹縣": [
   { cat: "教務", title: "學籍管理", file: "content/學籍管理.md" },
@@ -524,6 +524,24 @@ const MANUALS_BY_COUNTY = {
         { cat: "系統與其他", title: "校園學生製卡", file: "content/校園學生製卡.md" },
         { cat: "學務", title: "學生出缺席", file: "content/學生出缺席.md" },
         { cat: "學務", title: "學生就學查詢", file: "content/學生就學查詢.md" },
+  ],
+  "苗栗縣": [
+        { cat: "人事", title: "教師概況查詢", file: "content/教師概況查詢.md" },
+        { cat: "教務", title: "分組教學", file: "content/分組教學.md" },
+        { cat: "學務", title: "校園志工管理", file: "content/校園志工管理.md" },
+        { cat: "教務", title: "學籍管理", file: "content/學籍管理.md" },
+        { cat: "教務", title: "升級與編班", file: "content/升級與編班.md" },
+        { cat: "教務", title: "新生管理", file: "content/新生管理.md" },
+        { cat: "學務", title: "學生緊急資料", file: "content/學生緊急資料.md" },
+        { cat: "學務", title: "體適能測驗", file: "content/體適能測驗.md" },
+        { cat: "學務", title: "學生出缺席", file: "content/學生出缺席.md" },
+        { cat: "系統與其他", title: "全國圖書館", file: "content/全國圖書館.md" },
+        { cat: "教務", title: "會議管理", file: "content/會議管理.md" },
+        { cat: "教務", title: "課務管理", file: "content/課務管理.md" },
+        { cat: "教務", title: "成績管理", file: "content/成績管理.md" },
+        { cat: "學務", title: "I-Point", file: "content/I-Point.md" },
+        { cat: "教務", title: "行事曆", file: "content/行事曆.md" },
+        { cat: "人事", title: "人事資料管理", file: "content/人事資料管理.md" },
   ],
 };
 const CAT_COLOR = { "教務":"#265b98", "學務":"#1f9d52", "人事":"#c98a00", "系統與其他":"#8b5cf6" };
